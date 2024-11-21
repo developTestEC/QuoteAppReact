@@ -26,15 +26,17 @@ const UserNotesPage = () => {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <div>
+        <div className='quotePage'>
+            <div className='quotePage__header'>
             <h1>Hola,{user}</h1>
             <button
             onClick={handleClick}
-            >Agregar Quates</button>
+            >+</button>
+            </div>
             <h2>Todas las citas compartidas estan aquí</h2>
-            <ul className='quotelist'>
+            <ul>
                 {quotes.map((quote) => (
-                    <li key={quote.id}>
+                    <li key={quote.id} className='quotelist'>
                         <Quote texto= {quote.texto} autor = {quote.autor} libro = {quote.libro}/>
                     </li>
                 ))}

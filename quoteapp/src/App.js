@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage";
 import UserNotesPage from "./pages/UserNotesPage";
 import FormQuotePage from "./pages/FormQuotePage";
 import { Provider } from "react-redux";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/notes" element={<UserNotesPage />} />
           <Route path="/add" element={<FormQuotePage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>
     </Provider>

@@ -24,6 +24,7 @@ const FormQuotePage = () => {
         if (formData.quote && formData.bookTitle && formData.author) {
           dispatch(addQuoteRequest(formData));
           setFormData({ quote: "", bookTitle: "", author: "" }); // Reset formulario
+          navigation(-1);
         } else {
           alert("Todos los campos son obligatorios.");
         }
